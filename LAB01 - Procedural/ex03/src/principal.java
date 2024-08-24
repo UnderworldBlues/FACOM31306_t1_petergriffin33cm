@@ -50,14 +50,29 @@ public class principal {
     }
 
     public static void ex03() {
+
         Scanner sc = new Scanner(System.in);
-        // ....
+
+        int[] numsies = new int[6];
+
+        for(int k = 0; k < 6; k++) {
+            System.out.printf("Digite o número %d" + (k+1));
+            numsies[k] = sc.nextInt();
+        }
+
+        System.out.println("Mostrando os números digitados ao contrário");
+
+        for(int j = 5; j >= 0; j--) {
+            System.out.println(numsies[j]);
+        }
+
         sc.close();
     }
 
     public static void main(String[] args) {
-        // ex01();
+        ex01();
         ex02();
+        ex03();
     }
 
 
