@@ -1,13 +1,13 @@
 public class turma {
     Integer id;
-    Integer periodo;
     String curso;
+    professor professor;
     aluno[] alunos; //turma possui n alunos
 
-    public turma(Integer id, Integer periodo, String curso, aluno[] alunos) {
+    public turma(Integer id, String curso, professor professor, aluno[] alunos) {
         this.id = id;
-        this.periodo = periodo;
         this.curso = curso;
+        this.professor = professor;
         this.alunos = alunos;
     }
 
@@ -17,14 +17,6 @@ public class turma {
 
     public Integer getId() {
         return this.id;
-    }
-
-    public void setPeriodo(Integer periodo) {
-        this.periodo = periodo;
-    }
-
-    public Integer getPeriodo() {
-        return this.periodo;
     }
 
     public void setCurso(String curso) {
@@ -43,8 +35,16 @@ public class turma {
         return this.alunos;
     }
 
+    public void setProfessor(professor professor) {
+        this.professor = professor;
+    }
+
+    public professor getProfessor() {
+        return this.professor;
+    }
+
     public void show () {
-        System.out.println("Turma: " + this.id + " Periodo: " + this.periodo + " Curso: " + this.curso);
+        System.out.println("Turma: " + this.id + " Curso: " + this.curso);
         for (aluno a : this.alunos)
             System.out.println(a);
     }
