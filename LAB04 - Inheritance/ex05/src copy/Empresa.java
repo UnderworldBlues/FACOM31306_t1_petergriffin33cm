@@ -13,12 +13,12 @@ public class Empresa {
         Horistas horista1 = new Horistas("Charlie", "21/04/1998", 10.0f, 160);
         Horistas horista2 = new Horistas("Ronnie", "18/09/2006", 11.0f, 140);
 
-        // Calcular e exibir os salários dos funcionários
         Funcionario[] funcionarios = { chefe1, chefe2, vendedor1, vendedor2, operario1, operario2, horista1, horista2 };
 
         for (Funcionario funcionario : funcionarios) {
             double salario = funcionario.calc_Salario();
             System.out.println(funcionario.getNome() + ": Salário R$" + salario);
+            
         }
     }
 }
